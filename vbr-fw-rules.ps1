@@ -2,8 +2,9 @@
 .SYNOPSIS
     vbr-fw-rules.ps1 - A script to add/configure all Windows Server firewall rules for the Veeam Backup & Replication server
 .DESCRIPTION
-    Add/configure all inbound and outbound firewall rules initially created by the Veeam Backup & Replication server installation.
-    Based on Veeam Backup & Replication Build 11.0.1.1261
+    Add/configure all inbound and outbound firewall rules for the Veeam Backup & Replication (VBR) server. These rules are initially configured during the VBR installation.
+    This script can be used if the original rules were deleted or modified.
+    Rules are based on Veeam Backup & Replication Build 11.0.1.1261
 .INPUTS
     none
 .OUTPUTS
