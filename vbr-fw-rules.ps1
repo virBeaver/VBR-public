@@ -168,7 +168,7 @@ $rule = @{
     Profile = "Any";
     Enabled = "True";
     Action = "Allow";
-    Program = "C:\Program Files\Veeam\Backup File System VSS Integration\VeeamFilesysVssSvc.exe";
+    Program = "C:\Program Files\Veeam\Backup and Replication\Backup\Veeam.Backup.BrokerService.exe";
     Protocol = "TCP";
     LocalPort = "Any";
 }
@@ -269,20 +269,6 @@ $rule = @{
     Program = "C:\Program Files\Veeam\Veeam Distribution Service\Veeam.Backup.Agent.ConfigurationService.exe";
     Protocol = "TCP";
     LocalPort = "Any";
-}
-$rules.Add($rule) > $null
-
-$rule = @{
-    DisplayName = "Veeam GCP Service (In)";
-    Description = "Inbound rule for Veeam GCP Service";
-    Group = "Veeam Networking";
-    Direction = "Inbound";
-    Profile = "Any";
-    Enabled = "True";
-    Action = "Allow";
-    Program = "C:\Program Files\Veeam\Plugins\GCP\Service\Veeam.GCP.PlatformService.WebService.exe";
-    Protocol = "TCP";
-    LocalPort = "9403";
 }
 $rules.Add($rule) > $null
 
@@ -472,20 +458,6 @@ $rules.Add($rule) > $null
 $rule = @{
     DisplayName = "Veeam Backup & Replication Console (Out)";
     Description = "Outbound rule for Veeam for Azure Platform Service";
-    Group = "Veeam Networking";
-    Direction = "Outbound";
-    Profile = "Any";
-    Enabled = "True";
-    Action = "Allow";
-    Program = "C:\Program Files\Veeam\Backup and Replication\Console\veeam.backup.shell.exe";
-    Protocol = "TCP";
-    LocalPort = "Any";
-}
-$rules.Add($rule) > $null
-
-$rule = @{
-    DisplayName = "Veeam Backup & Replication Console (Out)";
-    Description = "Outbound rule for Veeam Backup & Replication Console";
     Group = "Veeam Networking";
     Direction = "Outbound";
     Profile = "Any";
