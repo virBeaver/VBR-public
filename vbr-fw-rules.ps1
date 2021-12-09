@@ -651,6 +651,216 @@ $rule = @{
 }
 $rules.Add($rule) > $null
 
+$rule = @{
+    DisplayName = "Veeam Data Mover (Out)";
+    Description = "Outbound rule for Veeam Data Mover included with Veeam Backup and Replication";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files\Veeam\Backup and Replication\Backup\WinAgent\VeeamAgent.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Data Mover (Veeam Catalog Service) (Out)";
+    Description = "Outbound rule for Veeam Data Mover included with Veeam Catalog Service";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files\Veeam\Backup and Replication\Backup Catalog\WinAgent\VeeamAgent.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Data Mover (Veeam Transport Service) (Out)";
+    Description = "Outbound rule for Veeam Data Mover included with Veeam Transport Service";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files (x86)\Veeam\Backup Transport\x86\VeeamAgent.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Data Mover x64 (Veeam Transport Service) (Out)";
+    Description = "Outbound rule for Veeam Data Mover x64 included with Veeam Transport Service";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files (x86)\Veeam\Backup Transport\x64\VeeamAgent.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Distribution Service (Out)";
+    Description = "Outbound rule for Veeam Distribution Service";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files\Veeam\Veeam Distribution Service\Veeam.Backup.Agent.ConfigurationService.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam GCP Service (Out)";
+    Description = "Outbound rule for Veeam GCP Service";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files\Veeam\Plugins\GCP\Service\Veeam.GCP.PlatformService.WebService.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam GCP UI (Out)";
+    Description = "Outbound rule for Veeam GCP UI.";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "Any";
+    Protocol = "TCP";
+    LocalPort = "9403";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Guest Interaction Proxy (Out)";
+    Description = "Outbound rule for Veeam Guest Interaction Proxy";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files (x86)\Veeam\Backup Transport\GuestInteraction\Veeam.Guest.Interaction.Proxy.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Installer Service (Veeam Backup and Replication) (Out)";
+    Description = "Outbound rule for Veeam Installer Service included with Veeam Backup and Replication";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Windows\Veeam\Backup\VeeamDeploymentSvc.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Mount Service (Out)";
+    Description = "Outbound rule for Veeam Mount Service";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files\Common Files\Veeam\Backup and Replication\Mount Service\Veeam.Backup.MountService.exe";
+    Protocol = "TCP";
+    LocalPort = "6170";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Traffic Redirector (Out)";
+    Description = "Outbound rule for Veeam Traffic Redirector included with Veeam Backup & Replication";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files\Veeam\Backup and Replication\Backup\VeeamNetworkRedirector.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Traffic Redirector (Veeam Backup & Replication console) (Out)";
+    Description = "Outbound rule for Veeam Network Traffic included with Veeam Backup & Replication console";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files\Veeam\Backup and Replication\Console\VeeamNetworkRedirector.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam Transport Service (Out)";
+    Description = "Outbound rule for Veeam Transport Service";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files (x86)\Veeam\Backup Transport\VeeamTransportSvc.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam vPower NFS Service (Out)";
+    Description = "Outbound rule for Veeam vPower NFS Service";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files (x86)\Veeam\vPowerNFS\VeeamNFSSvc.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
+$rule = @{
+    DisplayName = "Veeam VSS Hardware Provider Service (Out)";
+    Description = "Outbound rule for Veeam VSS Hardware Provider Service";
+    Group = "Veeam Networking";
+    Direction = "Outbound";
+    Profile = "Any";
+    Enabled = "True";
+    Action = "Allow";
+    Program = "C:\Program Files\Veeam\VSS Hardware Provider\Veeam.VssHwSnapshotProvider.exe";
+    Protocol = "TCP";
+    LocalPort = "Any";
+}
+$rules.Add($rule) > $null
+
 # Add/configure firewall rules 
 $rules | ForEach-Object {
 	New-NetFirewallRule @_
